@@ -26,10 +26,10 @@ public class MaxProductOfThree {
 			high = -1;
 			low = a[0];
 			for (int j = 0; j < a.length; j++) {
-				if (a[j] > a[i] && i != j) {
+				if (a[j] > a[i] && i < j) {
 					high = a[j];
 				}
-				if (a[j] < a[i] && a[j] > low && i != j) {
+				if (a[j] < a[i] && a[j] > low && i > j) {
 					low = a[j];
 				}
 			}
