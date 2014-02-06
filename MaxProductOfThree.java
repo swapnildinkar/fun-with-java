@@ -23,13 +23,13 @@ public class MaxProductOfThree {
 	int maxOfThree(int a[]) {
 		int high, low, prod = 0;
 		for (int i = 0; i < a.length; i++) {
-			high = -1;
-			low = a[0];
+			high = a[i];
+			low = a[i];
 			for (int j = 0; j < a.length; j++) {
-				if (a[j] > a[i] && high < a[j] && j > i) {
+				if (a[j] > a[i] && j > i) {
 					high = a[j];
 				}
-				if (a[j] < a[i] && a[j] > low && j < i) {
+				if (a[j] < a[i] && j < i) {
 					low = a[j];
 				}
 			}
